@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package lab1;
+
+/**
+ *@Name: 	Alphonce F. Stephano 	ID: 20011017
+ *@Name:	Yusuph Jumbe			ID: 20011011		
+ */
+public class Lab1Qn3 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// Declaration of mwanyumbu and mwakarantini salaries (in line).
+		int mwanyunguFeb=1150000,mwanyunguMarch=1250000;
+		int mwakarantiniJan=1200000,mwakarantiniFeb=1100000,mwakarantiniMarch=1300000;
+		
+		//Declarations that passes the getAverage(); functions for computing the average salary and 
+		int mwanyunguSalary=getAverage(mwanyunguFeb,mwanyunguMarch);
+		int mwakarantiniSalary=getAverage(mwakarantiniJan,mwakarantiniFeb,mwakarantiniMarch);
+		
+	//The simple function that compare two salaries using ternary operator
+		boolean salaryComparison=(mwanyunguSalary>mwakarantiniSalary)? true:false;
+	//The out put string that prints the paragraphs using printf(); function with %d place holder.
+		System.out.printf("The avarage salary of Mwanyungu is: %d whereas,the average salary of Mwakarantini is:%d\n",mwanyunguSalary,mwakarantiniSalary);
+		System.out.printf("Therefore, the assumption that the average salary of Mwanyungu is higher than that of Mwakarantini was "+salaryComparison);
+	}
+	//The two methods (Overloaded) methods,the blue prints to compute 2 Salaries average  .
+	public static int getAverage(int firstMonth,int secondMonth)
+	{	
+		int averageSalary=(firstMonth+secondMonth)/2;//Computes average
+		return averageSalary;
+	}
+	public static int getAverage(int firstMonth,int secondMonth,int thierdMonth)
+	{	
+		int averageSalary=(firstMonth+secondMonth+thierdMonth)/3; //Computes average
+		return averageSalary;
+	}
+	
+	}
