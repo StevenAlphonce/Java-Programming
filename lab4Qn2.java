@@ -23,7 +23,7 @@ public class lab4Qn2 {
 			sum+=num;
 			courses++;
 			}
-			float average=(courses>=0)? sum/courses:0;
+			float average=(courses>0)? sum/courses:0;
 			System.out.printf("My name is %s,%C.with the ID %d. My average score is: %.2f",lastName,firstName,studentId,average);
 		}
 }
