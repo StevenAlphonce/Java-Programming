@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class lab4Qn2 {
 	public static void main(String[] args) {
 		Scanner scan=new Scanner(System.in);
-		int sum=0,countCourse=0,items=1;
+		int sum=0,courses=0,items=1;
 		boolean validator=true;
 		System.out.printf("Enter student's ID:");
 		int studentId=scan.nextInt();
@@ -21,9 +21,9 @@ public class lab4Qn2 {
 			}
 			int num=scan.nextInt();
 			sum+=num;
-			countCourse++;
+			courses++;
 			}
-			float average=sum/countCourse;
+			float average=(courses>=0)? 0:sum/courses;
 			System.out.printf("My name is %s,%C.with the ID %d. My average score is: %.2f",lastName,firstName,studentId,average);
 		}
 }
